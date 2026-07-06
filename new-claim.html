@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>New Claim | KERSOG Compass</title>
+  <link rel="stylesheet" href="../style.css" />
+</head>
+<body>
+  <main class="app-shell">
+    <header class="top-bar">
+      <a href="../index.html"><img src="../assets/images/kersog-emblem.svg" alt="KERSOG emblem" /></a>
+      <div>
+        <h1>New Claim</h1>
+        <p>Start the job file.</p>
+      </div>
+      <button class="icon-btn" onclick="fakeAction('Settings will be connected later.')">☰</button>
+    </header>
+
+    <section class="page-title">
+  <h2>New claim</h2>
+  <p>Collect only what the field user needs before inspection.</p>
+</section>
+
+<form class="form-card">
+  <label>Customer name</label>
+  <input placeholder="Homeowner name" />
+
+  <label>Property address</label>
+  <input placeholder="Street, city, state" />
+
+  <label>Carrier</label>
+  <input placeholder="Insurance carrier" />
+
+  <label>Claim number</label>
+  <input placeholder="Optional" />
+
+  <label>Roof type</label>
+  <select>
+    <option>Architectural asphalt shingle</option>
+    <option>3-tab asphalt shingle</option>
+    <option>Wood shake</option>
+    <option>Metal</option>
+    <option>Tile</option>
+  </select>
+
+  <button class="btn primary" type="button" onclick="location.href='upload-eagleview.html'">Save & Continue</button>
+</form>
+
+    <nav class="bottom-nav">
+      <a href="dashboard.html" data-page="dashboard">⌂<span>Home</span></a>
+      <a href="new-claim.html" data-page="new-claim">＋<span>Claim</span></a>
+      <a href="upload-eagleview.html" data-page="upload-eagleview">⇧<span>Upload</span></a>
+      <a href="roof-inspection.html" data-page="roof-inspection">⌖<span>Inspect</span></a>
+      <a href="reports.html" data-page="reports">▤<span>Reports</span></a>
+    </nav>
+  </main>
+  <script src="../script.js"></script>
+</body>
+</html>

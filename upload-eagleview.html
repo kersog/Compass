@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Upload | KERSOG Compass</title>
+  <link rel="stylesheet" href="../style.css" />
+</head>
+<body>
+  <main class="app-shell">
+    <header class="top-bar">
+      <a href="../index.html"><img src="../assets/images/kersog-emblem.svg" alt="KERSOG emblem" /></a>
+      <div>
+        <h1>Upload</h1>
+        <p>Attach roof and claim documents.</p>
+      </div>
+      <button class="icon-btn" onclick="fakeAction('Settings will be connected later.')">☰</button>
+    </header>
+
+    <section class="page-title">
+  <h2>Upload reports</h2>
+  <p>Add EagleView, Hover, carrier scope, or property photos.</p>
+</section>
+
+<section class="card">
+  <div class="upload-box">
+    <div>
+      <strong>Tap to upload EagleView</strong>
+      <p>PDF, XML, images, or measurement files.</p>
+      <button class="btn primary" onclick="fakeAction('File upload will connect to backend storage later.')">Choose File</button>
+    </div>
+  </div>
+</section>
+
+<section class="card">
+  <h3>Import checklist</h3>
+  <div class="checklist">
+    <div class="check-item">EagleView report <span class="badge">Needed</span></div>
+    <div class="check-item">Carrier estimate <span class="badge">Optional</span></div>
+    <div class="check-item">ITEL / shingle data <span class="badge">Optional</span></div>
+  </div>
+</section>
+
+    <nav class="bottom-nav">
+      <a href="dashboard.html" data-page="dashboard">⌂<span>Home</span></a>
+      <a href="new-claim.html" data-page="new-claim">＋<span>Claim</span></a>
+      <a href="upload-eagleview.html" data-page="upload-eagleview">⇧<span>Upload</span></a>
+      <a href="roof-inspection.html" data-page="roof-inspection">⌖<span>Inspect</span></a>
+      <a href="reports.html" data-page="reports">▤<span>Reports</span></a>
+    </nav>
+  </main>
+  <script src="../script.js"></script>
+</body>
+</html>

@@ -3,256 +3,45 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Kersog Compass</title>
-
-  <style>
-    :root {
-      --green-dark: #183d26;
-      --green-muted: #5f7748;
-      --green-soft: #7f9468;
-      --cream: #f7f4ee;
-      --text-dark: #1f2a22;
-      --text-light: #ffffff;
-      --border: rgba(24, 61, 38, 0.35);
-    }
-
-    * {
-      box-sizing: border-box;
-      margin: 0;
-      padding: 0;
-    }
-
-    body {
-      font-family: Arial, Helvetica, sans-serif;
-      background: var(--cream);
-      color: var(--text-dark);
-      min-height: 100vh;
-    }
-
-    .app-screen {
-      min-height: 100vh;
-      max-width: 480px;
-      margin: 0 auto;
-      padding: 32px 24px 28px;
-      display: flex;
-      flex-direction: column;
-      justify-content: space-between;
-      background:
-        linear-gradient(
-          to bottom,
-          rgba(247, 244, 238, 0.95),
-          rgba(247, 244, 238, 0.72),
-          rgba(247, 244, 238, 0.96)
-        ),
-        url("roof-background.jpg");
-      background-size: cover;
-      background-position: center;
-    }
-
-    .brand {
-      text-align: center;
-      margin-top: 24px;
-    }
-
-    .emblem {
-      width: 150px;
-      height: 150px;
-      object-fit: contain;
-      margin-bottom: 12px;
-    }
-
-    .kersog {
-      font-size: 34px;
-      letter-spacing: 8px;
-      font-weight: 700;
-      color: var(--green-dark);
-    }
-
-    .tagline {
-      margin-top: 8px;
-      font-size: 12px;
-      letter-spacing: 2px;
-      color: #6d6d63;
-      text-transform: uppercase;
-    }
-
-    .compass-title {
-      margin-top: 48px;
-      text-align: center;
-    }
-
-    .compass-title h1 {
-      font-size: 44px;
-      letter-spacing: 10px;
-      color: var(--green-dark);
-      font-weight: 800;
-    }
-
-    .headline {
-      margin-top: 40px;
-      text-align: center;
-      font-size: 31px;
-      line-height: 1.25;
-      font-weight: 800;
-      color: var(--green-dark);
-    }
-
-    .headline span {
-      display: block;
-      color: var(--green-soft);
-    }
-
-    .subtext {
-      margin: 22px auto 0;
-      max-width: 340px;
-      text-align: center;
-      font-size: 18px;
-      line-height: 1.45;
-      color: #33382f;
-    }
-
-    .actions {
-      margin-top: 42px;
-      display: flex;
-      flex-direction: column;
-      gap: 18px;
-    }
-
-    button {
-      width: 100%;
-      min-height: 72px;
-      border-radius: 10px;
-      font-size: 26px;
-      font-weight: 700;
-      cursor: pointer;
-    }
-
-    .primary-btn {
-      background: linear-gradient(to right, var(--green-muted), var(--green-dark));
-      color: var(--text-light);
-      border: 1px solid var(--border);
-      box-shadow: 0 8px 18px rgba(24, 61, 38, 0.22);
-    }
-
-    .secondary-btn {
-      background: rgba(255, 255, 255, 0.72);
-      color: var(--green-dark);
-      border: 2px solid var(--green-muted);
-    }
-
-    .feature-row {
-      margin-top: 38px;
-      display: grid;
-      grid-template-columns: repeat(3, 1fr);
-      gap: 12px;
-      text-align: center;
-      color: var(--green-dark);
-    }
-
-    .feature {
-      font-size: 13px;
-      line-height: 1.25;
-      padding: 0 6px;
-    }
-
-    .feature-icon {
-      font-size: 28px;
-      margin-bottom: 8px;
-    }
-
-    .footer {
-      margin-top: 34px;
-      text-align: center;
-      font-size: 14px;
-      letter-spacing: 5px;
-      font-weight: 700;
-      color: var(--green-dark);
-    }
-
-    @media (min-width: 768px) {
-      .app-screen {
-        max-width: 720px;
-        padding: 48px 64px;
-      }
-
-      .headline {
-        font-size: 38px;
-      }
-
-      .subtext {
-        font-size: 21px;
-        max-width: 520px;
-      }
-
-      button {
-        max-width: 520px;
-        margin: 0 auto;
-      }
-    }
-  </style>
+  <title>KERSOG Compass</title>
+  <link rel="stylesheet" href="style.css" />
 </head>
-
 <body>
-  <main class="app-screen">
-    <section>
-      <div class="brand">
-        <!-- Replace this file with your real KERSOG emblem image -->
-        <img class="emblem" src="kersog-emblem.png" alt="Kersog emblem" />
-
-        <div class="kersog">KERSOG</div>
-        <div class="tagline">Built for the roof. Backed by purpose.</div>
+  <main class="welcome-screen">
+    <section class="welcome-card">
+      <div class="brand-mark">
+        <img src="assets/images/kersog-emblem.svg" alt="KERSOG emblem" class="emblem" />
+        <div class="brand-name">KERSOG</div>
+        <div class="brand-line">Built for the roof. Backed by purpose.</div>
       </div>
 
-      <div class="compass-title">
-        <h1>COMPASS</h1>
+      <div class="compass-logo">COMP<span>A</span>SS</div>
+
+      <section class="hero-copy">
+        <h1>Roof inspections.<br />Claim documentation.<br /><span>Guided from the field.</span></h1>
+        <p>Create accurate job files, capture damage, and move from inspection to scope with confidence.</p>
+      </section>
+
+      <div class="button-stack">
+        <a class="btn primary" href="pages/create-account.html">Create Account</a>
+        <a class="btn secondary" href="pages/login.html">Sign In</a>
       </div>
 
-      <div class="headline">
-        Roof inspections.<br />
-        Claim documentation.
-        <span>Guided from the field.</span>
-      </div>
-
-      <p class="subtext">
-        Create accurate job files, capture damage, and move from inspection to signed contract with confidence.
-      </p>
-
-      <div class="actions">
-        <button class="primary-btn" onclick="createAccount()">Create Account</button>
-        <button class="secondary-btn" onclick="signIn()">Sign In</button>
-      </div>
-
-      <div class="feature-row">
-        <div class="feature">
-          <div class="feature-icon">🛡️</div>
-          Built for roofing professionals
+      <section class="trust-row">
+        <div>
+          <strong>Field-first</strong>
+          <span>Built for roofing professionals</span>
         </div>
-
-        <div class="feature">
-          <div class="feature-icon">📷</div>
-          Capture. Document. Build stronger claims.
+        <div>
+          <strong>Document</strong>
+          <span>Photos, notes, and scope support</span>
         </div>
-
-        <div class="feature">
-          <div class="feature-icon">📄</div>
-          From inspection to scope.
+        <div>
+          <strong>Export</strong>
+          <span>Move from inspection to claim file</span>
         </div>
-      </div>
+      </section>
     </section>
-
-    <footer class="footer">
-      KERSOG | COMPASS
-    </footer>
   </main>
-
-  <script>
-    function createAccount() {
-      alert("Create Account screen coming next.");
-    }
-
-    function signIn() {
-      alert("Sign In screen coming next.");
-    }
-  </script>
 </body>
 </html>

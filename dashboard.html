@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Dashboard | KERSOG Compass</title>
+  <link rel="stylesheet" href="../style.css" />
+</head>
+<body>
+  <main class="app-shell">
+    <header class="top-bar">
+      <a href="../index.html"><img src="../assets/images/kersog-emblem.svg" alt="KERSOG emblem" /></a>
+      <div>
+        <h1>Dashboard</h1>
+        <p>Your field command center.</p>
+      </div>
+      <button class="icon-btn" onclick="fakeAction('Settings will be connected later.')">☰</button>
+    </header>
+
+    <section class="page-title">
+  <h2>Field dashboard</h2>
+  <p>Start a claim, continue an inspection, or review recent roof files.</p>
+</section>
+
+<section class="grid-actions">
+  <a class="action-tile" href="new-claim.html"><strong>New Claim</strong><span>Create a job file before walking the property.</span></a>
+  <a class="action-tile" href="upload-eagleview.html"><strong>Upload EagleView</strong><span>Attach roof measurements and property reports.</span></a>
+  <a class="action-tile" href="roof-inspection.html"><strong>Start Inspection</strong><span>Capture damage, photos, and repair events.</span></a>
+</section>
+
+<section class="card">
+  <h3>Recent claims</h3>
+  <div class="claim-list">
+    <article class="claim-card"><small>Draft</small><h3>Smith Residence</h3><p>Roof inspection not started.</p></article>
+    <article class="claim-card"><small>Inspection</small><h3>Johnson Claim</h3><p>Photos captured. Scope review pending.</p></article>
+  </div>
+</section>
+
+    <nav class="bottom-nav">
+      <a href="dashboard.html" data-page="dashboard">⌂<span>Home</span></a>
+      <a href="new-claim.html" data-page="new-claim">＋<span>Claim</span></a>
+      <a href="upload-eagleview.html" data-page="upload-eagleview">⇧<span>Upload</span></a>
+      <a href="roof-inspection.html" data-page="roof-inspection">⌖<span>Inspect</span></a>
+      <a href="reports.html" data-page="reports">▤<span>Reports</span></a>
+    </nav>
+  </main>
+  <script src="../script.js"></script>
+</body>
+</html>

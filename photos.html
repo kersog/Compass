@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Photos | KERSOG Compass</title>
+  <link rel="stylesheet" href="../style.css" />
+</head>
+<body>
+  <main class="app-shell">
+    <header class="top-bar">
+      <a href="../index.html"><img src="../assets/images/kersog-emblem.svg" alt="KERSOG emblem" /></a>
+      <div>
+        <h1>Photos</h1>
+        <p>Capture and organize evidence.</p>
+      </div>
+      <button class="icon-btn" onclick="fakeAction('Settings will be connected later.')">☰</button>
+    </header>
+
+    <section class="page-title">
+  <h2>Photos</h2>
+  <p>Organize evidence while still on site.</p>
+</section>
+
+<section class="grid-actions">
+  <button class="action-tile" onclick="fakeAction('Camera capture will connect later.')"><strong>Take Photo</strong><span>Open device camera.</span></button>
+  <button class="action-tile" onclick="fakeAction('Gallery upload will connect later.')"><strong>Upload</strong><span>Add existing photos.</span></button>
+</section>
+
+<section class="card">
+  <h3>Photo categories</h3>
+  <div class="checklist">
+    <div class="check-item">Front elevation <span class="badge">0</span></div>
+    <div class="check-item">Damage closeups <span class="badge">0</span></div>
+    <div class="check-item">Test square / brittle test <span class="badge">0</span></div>
+    <div class="check-item">Accessories and metals <span class="badge">0</span></div>
+  </div>
+</section>
+
+    <nav class="bottom-nav">
+      <a href="dashboard.html" data-page="dashboard">⌂<span>Home</span></a>
+      <a href="new-claim.html" data-page="new-claim">＋<span>Claim</span></a>
+      <a href="upload-eagleview.html" data-page="upload-eagleview">⇧<span>Upload</span></a>
+      <a href="roof-inspection.html" data-page="roof-inspection">⌖<span>Inspect</span></a>
+      <a href="reports.html" data-page="reports">▤<span>Reports</span></a>
+    </nav>
+  </main>
+  <script src="../script.js"></script>
+</body>
+</html>
