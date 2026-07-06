@@ -10,61 +10,127 @@
 <body>
 
 <div class="welcome-screen">
-  <div class="welcome-card">
+<div class="welcome-card">
 
-    <div class="brand-name">COMPASS</div>
+<div class="brand-name">COMPASS</div>
 
-    <h1>Company Settings</h1>
+<h1>Company Settings</h1>
 
-    <p class="subtitle">
-      Set up how your company prices, documents, and manages jobs.
-    </p>
+<p class="subtitle">
+Set up how your company prices, documents, and manages jobs.
+</p>
 
-    <div class="settings-grid">
+<form class="form-card">
 
-      <a href="#" class="settings-card">
-        <h3>Company Profile</h3>
-        <p>Company name, logo, address, license info, and contact details.</p>
-      </a>
+<h2>Company Profile</h2>
 
-      <a href="#" class="settings-card">
-        <h3>Pricing Center</h3>
-        <p>Labor rates, material pricing, overhead, profit, and taxes.</p>
-      </a>
+<input type="text" placeholder="Company Name">
+<input type="text" placeholder="Business Address">
+<input type="text" placeholder="City">
+<input type="text" placeholder="State">
+<input type="text" placeholder="ZIP Code">
+<input type="tel" placeholder="Business Phone">
+<input type="email" placeholder="Business Email">
+<input type="url" placeholder="Website">
+<input type="text" placeholder="License Number">
 
-      <a href="#" class="settings-card">
-        <h3>Supplier Connections</h3>
-        <p>Connect ABC Supply, Beacon, SRS, or other suppliers.</p>
-      </a>
+<hr>
 
-      <a href="#" class="settings-card">
-        <h3>Roofing Defaults</h3>
-        <p>Waste, starter, ridge cap, drip edge, ventilation, and accessories.</p>
-      </a>
+<h2>Pricing Center</h2>
 
-      <a href="#" class="settings-card">
-        <h3>Team Members</h3>
-        <p>Invite users and manage roles for sales, admin, and production.</p>
-      </a>
+<input type="number" placeholder="Default Labor Rate Per Hour">
+<input type="number" placeholder="Roofing Labor Rate Per Square">
+<input type="number" placeholder="Tear-Off Labor Rate Per Square">
+<input type="number" placeholder="Underlayment Labor Rate Per Square">
+<input type="number" placeholder="Flashing Labor Rate Per Linear Foot">
+<input type="number" placeholder="Drip Edge Labor Rate Per Linear Foot">
+<input type="number" placeholder="Ridge Cap Labor Rate Per Linear Foot">
+<input type="number" placeholder="Minimum Job Charge">
 
-      <a href="#" class="settings-card">
-        <h3>Report Branding</h3>
-        <p>Logo, letterhead, email signature, and default report language.</p>
-      </a>
+<input type="number" placeholder="Overhead %">
+<input type="number" placeholder="Profit %">
+<input type="number" placeholder="Sales Tax %">
 
-    </div>
+<select>
+<option>Preferred Price Source</option>
+<option>Use Company Price List</option>
+<option>Use Supplier Material Pricing + Company Labor</option>
+<option>Use RSMeans Pricing</option>
+<option>Use Custom Manual Pricing</option>
+</select>
 
-    <hr>
+<label class="upload-label">Upload Company Price List</label>
+<input type="file">
 
-    <a href="dashboard.html" class="btn primary">
-      Save Settings
-    </a>
+<label class="upload-label">Upload Labor Price List</label>
+<input type="file">
 
-    <a href="dashboard.html" class="btn secondary">
-      Back to Dashboard
-    </a>
+<hr>
 
-  </div>
+<h2>Supplier Connections</h2>
+
+<input type="text" placeholder="Primary Supplier">
+<input type="text" placeholder="Supplier Account Number">
+<input type="text" placeholder="Supplier Contact Name">
+<input type="email" placeholder="Supplier Contact Email">
+
+<select>
+<option>Supplier Connection Status</option>
+<option>Not Connected</option>
+<option>Request Connection</option>
+<option>Connected</option>
+</select>
+
+<hr>
+
+<h2>Roofing Defaults</h2>
+
+<input type="number" placeholder="Default Waste %">
+<input type="text" placeholder="Default Shingle Type">
+<input type="text" placeholder="Default Underlayment">
+<input type="text" placeholder="Default Ice & Water Shield Rule">
+<input type="text" placeholder="Default Starter">
+<input type="text" placeholder="Default Ridge Cap">
+<input type="text" placeholder="Default Drip Edge">
+<input type="text" placeholder="Default Ventilation Method">
+
+<hr>
+
+<h2>Team Members</h2>
+
+<input type="email" placeholder="Invite Team Member by Email">
+
+<select>
+<option>Role</option>
+<option>Owner</option>
+<option>Admin</option>
+<option>Sales Representative</option>
+<option>Project Manager</option>
+<option>Estimator</option>
+<option>Production</option>
+</select>
+
+<hr>
+
+<h2>Report Branding</h2>
+
+<label class="upload-label">Upload Company Logo</label>
+<input type="file">
+
+<textarea placeholder="Default Email Signature"></textarea>
+<textarea placeholder="Default Report Disclaimer or Company Notes"></textarea>
+
+<button type="button" class="btn primary">
+Save Company Settings
+</button>
+
+<a href="dashboard.html" class="btn secondary">
+Back to Dashboard
+</a>
+
+</form>
+
+</div>
 </div>
 
 </body>
