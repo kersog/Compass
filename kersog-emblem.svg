@@ -1,8 +1,1 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 240 240">
-  <rect width="240" height="240" fill="none"/>
-  <path d="M120 16 202 52v72c0 48-33 82-82 100-49-18-82-52-82-100V52l82-36Z" fill="none" stroke="#16351f" stroke-width="12"/>
-  <path d="M72 128 120 84l48 44" fill="none" stroke="#60754a" stroke-width="12" stroke-linecap="round" stroke-linejoin="round"/>
-  <path d="M85 132h70v46H85z" fill="#f7f4ee" stroke="#16351f" stroke-width="8"/>
-  <path d="M104 149h12v12h-12zM124 149h12v12h-12z" fill="#16351f"/>
-  <path d="M76 72c13-22 35-34 62-31 15 2 28 7 39 16l-21 27c-7-6-15-9-25-10-16-1-29 7-36 21L76 72Z" fill="#16351f"/>
-</svg>
+kersog-emblem.svg
