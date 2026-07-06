@@ -1,49 +1,97 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Dashboard | KERSOG Compass</title>
-  <link rel="stylesheet" href="../style.css" />
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Dashboard | Compass</title>
+<link rel="stylesheet" href="style.css">
 </head>
+
 <body>
-  <main class="app-shell">
-    <header class="top-bar">
-      <a href="../index.html"><img src="../assets/images/kersog-emblem.svg" alt="KERSOG emblem" /></a>
-      <div>
-        <h1>Dashboard</h1>
-        <p>Your field command center.</p>
-      </div>
-      <button class="icon-btn" onclick="fakeAction('Settings will be connected later.')">☰</button>
-    </header>
 
-    <section class="page-title">
-  <h2>Field dashboard</h2>
-  <p>Start a claim, continue an inspection, or review recent roof files.</p>
-</section>
+<div class="welcome-screen">
+<div class="welcome-card">
 
-<section class="grid-actions">
-  <a class="action-tile" href="new-claim.html"><strong>New Claim</strong><span>Create a job file before walking the property.</span></a>
-  <a class="action-tile" href="upload-eagleview.html"><strong>Upload EagleView</strong><span>Attach roof measurements and property reports.</span></a>
-  <a class="action-tile" href="roof-inspection.html"><strong>Start Inspection</strong><span>Capture damage, photos, and repair events.</span></a>
-</section>
+<h1>Dashboard</h1>
 
-<section class="card">
-  <h3>Recent claims</h3>
-  <div class="claim-list">
-    <article class="claim-card"><small>Draft</small><h3>Smith Residence</h3><p>Roof inspection not started.</p></article>
-    <article class="claim-card"><small>Inspection</small><h3>Johnson Claim</h3><p>Photos captured. Scope review pending.</p></article>
-  </div>
-</section>
+<p class="subtitle">
+What are we working on today?
+</p>
 
-    <nav class="bottom-nav">
-      <a href="dashboard.html" data-page="dashboard">⌂<span>Home</span></a>
-      <a href="new-claim.html" data-page="new-claim">＋<span>Claim</span></a>
-      <a href="upload-eagleview.html" data-page="upload-eagleview">⇧<span>Upload</span></a>
-      <a href="roof-inspection.html" data-page="roof-inspection">⌖<span>Inspect</span></a>
-      <a href="reports.html" data-page="reports">▤<span>Reports</span></a>
-    </nav>
-  </main>
-  <script src="../script.js"></script>
+<div class="button-stack">
+
+<a href="new-claim.html" class="btn primary">
++ New Claim
+</a>
+
+<a href="upload-eagleview.html" class="btn secondary">
+Upload EagleView / HOVER
+</a>
+
+<a href="photos.html" class="btn secondary">
+Open Photo Capture
+</a>
+
+<a href="estimate.html" class="btn secondary">
+Estimate Review
+</a>
+
+</div>
+
+<hr>
+
+<div class="form-card">
+
+<h2>Active Claims</h2>
+
+<div class="claim-card">
+<h3>Smith Residence</h3>
+<p>Inspection not started</p>
+<a href="new-claim.html" class="mini-link">Open Claim</a>
+</div>
+
+<div class="claim-card">
+<h3>Johnson Claim</h3>
+<p>Photos captured · Scope review needed</p>
+<a href="photos.html" class="mini-link">Continue</a>
+</div>
+
+</div>
+
+<hr>
+
+<div class="form-card">
+
+<h2>Quick Status</h2>
+
+<div class="status-grid">
+
+<div class="status-box">
+<strong>2</strong>
+<span>Active Claims</span>
+</div>
+
+<div class="status-box">
+<strong>0</strong>
+<span>Ready to Export</span>
+</div>
+
+<div class="status-box">
+<strong>1</strong>
+<span>Needs Photos</span>
+</div>
+
+</div>
+
+</div>
+
+<a href="index.html" class="btn secondary">
+Sign Out
+</a>
+
+</div>
+</div>
+
 </body>
 </html>
+
