@@ -1,186 +1,97 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Create Account | Compass</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <link rel="stylesheet" href="../style.css">
+<title>Create Account | Compass</title>
+
+<link rel="stylesheet" href="style.css">
+
 </head>
 
 <body>
 
-<div class="app-shell">
+<div class="welcome-screen">
 
-    <header class="top-bar">
-        <a href="../index.html">
-            <img src="../assets/images/kersog-emblem.svg" class="emblem" alt="KERSOG">
-        </a>
+<div class="welcome-card">
 
-        <div>
-            <h1>Create Account</h1>
-            <p>Let's build your Compass workspace.</p>
-        </div>
-    </header>
+<img src="kersog-emblem.svg" class="emblem" alt="KERSOG">
 
+<h1>Create Your Compass Account</h1>
 
-    <section class="page-title">
+<p class="subtitle">
+Create your account to begin managing inspections, claims, and estimates.
+</p>
 
-        <h2>Welcome to Compass</h2>
+<form class="form-card">
 
-        <p>
-            Tell us a little about yourself so we can personalize your experience.
-        </p>
+<h2>Personal Information</h2>
 
-    </section>
+<input type="text" placeholder="First Name">
 
+<input type="text" placeholder="Last Name">
 
-    <form class="form-card">
+<input type="email" placeholder="Email Address">
 
-        <h3>Personal Information</h3>
+<input type="tel" placeholder="Mobile Phone">
 
-        <label>First Name</label>
-        <input type="text" placeholder="John">
 
-        <label>Last Name</label>
-        <input type="text" placeholder="Smith">
+<h2>Company Information</h2>
 
-        <label>Email Address</label>
-        <input type="email" placeholder="john@email.com">
+<input type="text" placeholder="Company Name">
 
-        <label>Mobile Phone</label>
-        <input type="tel" placeholder="(555) 555-5555">
+<select>
+<option>Your Role</option>
+<option>Owner</option>
+<option>Sales Representative</option>
+<option>Project Manager</option>
+<option>Estimator</option>
+<option>Insurance Adjuster</option>
+<option>Other</option>
+</select>
 
+<input type="text" placeholder="City">
 
-        <hr>
+<select>
+<option>Kansas</option>
+<option>Oklahoma</option>
+<option>Missouri</option>
+<option>Colorado</option>
+<option>Texas</option>
+</select>
 
 
-        <h3>Company Information</h3>
+<h2>Security</h2>
 
-        <label>Company Name</label>
-        <input type="text" placeholder="ABC Roofing">
+<input type="password" placeholder="Password">
 
-        <label>Your Role</label>
+<input type="password" placeholder="Confirm Password">
 
-        <select>
+<label class="check">
+<input type="checkbox">
+I agree to the Terms of Service
+</label>
 
-            <option>Owner</option>
+<label class="check">
+<input type="checkbox">
+I agree to the Privacy Policy
+</label>
 
-            <option>Sales Representative</option>
+<a href="company-setup.html" class="btn primary">
+Create My Account
+</a>
 
-            <option>Project Manager</option>
+<a href="index.html" class="btn secondary">
+Back
+</a>
 
-            <option>Independent Adjuster</option>
-
-            <option>Insurance Adjuster</option>
-
-            <option>Estimator</option>
-
-            <option>Other</option>
-
-        </select>
-
-
-        <label>City</label>
-        <input type="text">
-
-        <label>State</label>
-
-        <select>
-
-            <option>Kansas</option>
-            <option>Oklahoma</option>
-            <option>Missouri</option>
-            <option>Colorado</option>
-            <option>Nebraska</option>
-            <option>Texas</option>
-
-        </select>
-
-
-        <label>Time Zone</label>
-
-        <select>
-
-            <option>Central</option>
-
-            <option>Mountain</option>
-
-            <option>Eastern</option>
-
-            <option>Pacific</option>
-
-        </select>
-
-
-        <hr>
-
-
-        <h3>Security</h3>
-
-        <label>Password</label>
-
-        <input type="password">
-
-
-        <label>Confirm Password</label>
-
-        <input type="password">
-
-
-        <div style="margin-top:25px;">
-
-            <label>
-
-                <input type="checkbox">
-
-                I agree to the Terms of Service
-
-            </label>
-
-            <br><br>
-
-            <label>
-
-                <input type="checkbox">
-
-                I agree to the Privacy Policy
-
-            </label>
-
-        </div>
-
-
-        <br><br>
-
-
-        <button
-            type="button"
-            class="btn primary"
-            onclick="window.location='company-setup.html'">
-
-            Create My Account
-
-        </button>
-
-
-        <br>
-
-
-        <button
-            type="button"
-            class="btn secondary"
-            onclick="window.location='login.html'">
-
-            Already have an account? Sign In
-
-        </button>
-
-    </form>
+</form>
 
 </div>
 
-<script src="../script.js"></script>
+</div>
 
 </body>
 </html>
+
