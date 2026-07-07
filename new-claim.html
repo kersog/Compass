@@ -16,9 +16,7 @@
 
 <h1>New Job</h1>
 
-<p class="subtitle">
-Create the job file before inspection begins.
-</p>
+<p class="subtitle">Create the job file before inspection begins.</p>
 
 <form class="form-card">
 
@@ -43,7 +41,7 @@ Create the job file before inspection begins.
 <div class="choice-list">
 
 <label class="choice-row">
-<input type="radio" name="payment-type">
+<input type="radio" name="payment-type" value="insurance" onclick="showInsuranceDetails(true)">
 <div>
 <strong>Insurance Claim</strong>
 <small>Storm damage or carrier involvement</small>
@@ -51,7 +49,7 @@ Create the job file before inspection begins.
 </label>
 
 <label class="choice-row">
-<input type="radio" name="payment-type">
+<input type="radio" name="payment-type" value="cash" onclick="showInsuranceDetails(false)">
 <div>
 <strong>Cash Job</strong>
 <small>Retail customer paying directly</small>
@@ -120,9 +118,7 @@ Create the job file before inspection begins.
 
 <h2>Measurement Source</h2>
 
-<p class="section-help">
-Choose how this job’s roof measurements will be added.
-</p>
+<p class="section-help">Choose how this job’s roof measurements will be added.</p>
 
 <div class="choice-list">
 
@@ -151,83 +147,4 @@ Choose how this job’s roof measurements will be added.
 </label>
 
 <label class="choice-row">
-<input type="radio" name="measurement-source">
-<div>
-<strong>Skip For Now</strong>
-<small>Add measurements later inside the job.</small>
-</div>
-</label>
-
-</div>
-
-<label class="upload-label">Upload EagleView File</label>
-<input type="file">
-
-<label class="upload-label">Upload HOVER File</label>
-<input type="file">
-
-<hr>
-
-<h2>Insurance Details</h2>
-
-<input type="text" placeholder="Carrier">
-<input type="text" placeholder="Policy Number">
-<input type="text" placeholder="Claim Number">
-<input type="date">
-<input type="text" placeholder="Adjuster Name">
-<input type="tel" placeholder="Adjuster Phone">
-<input type="email" placeholder="Adjuster Email">
-<input type="number" placeholder="Deductible">
-<input type="text" placeholder="Mortgage Company">
-
-<hr>
-
-
-
-</div>
-
-<hr>
-
-<h2>Ready to Inspect</h2>
-
-<div class="summary-card">
-<p><strong>Customer</strong> Pending</p>
-<p><strong>Payment Type</strong> Pending</p>
-<p><strong>Property Type</strong> Pending</p>
-<p><strong>Measurements</strong> Pending</p>
-<p><strong>Photos</strong> Pending</p>
-</div>
-
-<a href="roof-inspection.html" class="btn primary">
-<hr>
-
-<h2>Ready to Inspect</h2>
-
-<div class="summary-card">
-
-<p><strong>✓ Customer Information</strong><span>Ready</span></p>
-
-<p><strong>✓ Job Type</strong><span>Ready</span></p>
-
-<p><strong>✓ Property Information</strong><span>Ready</span></p>
-
-<p><strong>✓ Measurement Source</strong><span>Ready</span></p>
-
-<p><strong>Insurance Information</strong><span>If Applicable</span></p>
-
-</div>
-
-<a href="inspection.html" class="btn primary">
-Create Job & Begin Inspection
-</a>
-
-<a href="dashboard.html" class="btn secondary">
-Save & Return to Dashboard
-</a>
-
-
-</div>
-</div>
-
-</body>
-</html>
+<input type="radio" name=”
