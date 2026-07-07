@@ -402,7 +402,52 @@ font-size:24px;
 
 textarea{
     width:100%;
-    min-height:130px;
+    min-height:130px;.section-subhead{
+    color:#23352D;
+    font-size:20px;
+    margin:25px 0 12px;
+}
+
+.choice-list{
+    display:grid;
+    gap:14px;
+}
+
+.choice-row{
+    display:grid;
+    grid-template-columns:28px 1fr;
+    align-items:center;
+    column-gap:18px;
+    background:#F7F4EC;
+    border:1px solid #D7D4CB;
+    border-radius:16px;
+    padding:18px 22px;
+    margin-bottom:14px;
+    cursor:pointer;
+}
+
+.choice-row input[type="radio"]{
+    width:20px;
+    height:20px;
+    margin:0;
+    justify-self:center;
+}
+
+.choice-row div{
+    display:flex;
+    flex-direction:column;
+}
+
+.choice-row strong{
+    font-size:18px;
+    color:#23352D;
+}
+
+.choice-row small{
+    margin-top:4px;
+    color:#666;
+}
+
     padding:16px;
     margin-bottom:18px;
     border:1px solid var(--border);
@@ -417,3 +462,5 @@ textarea:focus{
     border-color:var(--green);
     box-shadow:0 0 0 4px rgba(85,107,93,.12);
 }
+
+
