@@ -945,4 +945,16 @@ body {
   border-radius: 0 !important;
 }
 
+/* KERSOG TEXTURE TEST */
+body {
+  background:
+    linear-gradient(rgba(244, 240, 232, 0.94), rgba(244, 240, 232, 0.94)),
+    url("/images/linen-texture.jpg") !important;
+  background-size: 700px !important;
+  background-repeat: repeat !important;
+}
+
+* {
+  border-radius: 0 !important;
+}
 
