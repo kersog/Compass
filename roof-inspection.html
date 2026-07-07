@@ -62,7 +62,18 @@
 
         <div class="damage-card">
           <h3>Field Notes</h3>
-          <textarea placeholder="Add notes about damage, access, steepness, materials, or special conditions."></textarea>
+
+          <div class="dictation-actions">
+            <button type="button" class="secondary-button" id="dictation-btn" onclick="toggleDictation()">
+              Start Dictation
+            </button>
+            <span id="dictation-status" class="dictation-status">Tap to speak notes.</span>
+          </div>
+
+          <textarea
+            id="field-notes"
+            placeholder="Add notes about damage, access, steepness, materials, or special conditions."
+          ></textarea>
         </div>
 
         <div class="form-actions">
@@ -78,6 +89,79 @@
       </div>
     </div>
   </div>
+
+  <script>
+    let recognition;
+    let isListening = false;
+
+    function toggleDictation() {
+      const SpeechRecognition = window.SpeechRecognition || window.webkitSpeechRecognition;
+      const button = document.getElementById("dictation-btn");
+      const status = document.getElementById("dictation-status");
+      const notes = document.getElementById("field-notes");
+
+      if (!SpeechRecognition) {
+        status.textContent = "Speech-to-text is not supported in this browser.";
+        return;
+      }
+
+      if (!recognition) {
+        recognition = new SpeechRecognition();
+        recognition.continuous = true;
+        recognition.interimResults = true;
+        recognition.lang = "en-US";
+
+        recognition.onstart = function () {
+          isListening = true;
+          button.textContent = "Stop Dictation";
+          status.textContent = "Listening...";
+        };
+
+        recognition.onresult = function (event) {
+          let finalTranscript = "";
+          let interimTranscript = "";
+
+          for (let i = event.resultIndex; i < event.results.length; i++) {
+            const transcript = event.results[i][0].transcript;
+            if (event.results[i].isFinal) {
+              finalTranscript += transcript + " ";
+            } else {
+              interimTranscript += transcript;
+            }
+          }
+
+          notes.value = notes.value.replace(/\s*\[listening\.\.\..*\]$/i, "").trim();
+
+          if (finalTranscript) {
+            notes.value = (notes.value + " " + finalTranscript).trim() + " ";
+          }
+
+          if (interimTranscript) {
+            notes.value = notes.value.trim() + " [listening... " + interimTranscript + "]";
+          }
+        };
+
+        recognition.onerror = function () {
+          status.textContent = "There was a problem with speech capture.";
+          button.textContent = "Start Dictation";
+          isListening = false;
+        };
+
+        recognition.onend = function () {
+          notes.value = notes.value.replace(/\s*\[listening\.\.\..*\]$/i, "").trim();
+          button.textContent = "Start Dictation";
+          status.textContent = "Tap to speak notes.";
+          isListening = false;
+        };
+      }
+
+      if (isListening) {
+        recognition.stop();
+      } else {
+        recognition.start();
+      }
+    }
+  </script>
 
 </body>
 </html>
