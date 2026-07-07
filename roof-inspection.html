@@ -1,167 +1,97 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Inspection | Compass</title>
-  <link rel="stylesheet" href="style.css">
-</head>
-<body>
+<script>
+  let recognition;
+  let isListening = false;
+  let finalNotesBeforeListening = "";
 
-  <div class="welcome-screen">
-    <div class="welcome-card">
+  function toggleDictation() {
+    const SpeechRecognition =
+      window.SpeechRecognition || window.webkitSpeechRecognition;
 
-      <div class="brand-name">COMPASS</div>
+    const button = document.getElementById("dictation-btn");
+    const status = document.getElementById("dictation-status");
+    const notes = document.getElementById("field-notes");
 
-      <h1>Inspection</h1>
-
-      <p class="subtitle">Walk the roof with a guided workflow.</p>
-
-      <div class="form-card">
-
-        <div class="inspection-header">
-          <div class="job-summary-card">
-            <h2>Roof Inspection</h2>
-            <p>Designed for a salesperson standing at the property.</p>
-            <span class="status-pill">Inspection In Progress</span>
-          </div>
-
-          <div class="inspection-progress">
-            <h3>Inspection Progress</h3>
-            <div class="progress-bar">
-              <div style="width: 38%;"></div>
-            </div>
-            <p>38% complete</p>
-          </div>
-        </div>
-
-        <div class="diagram-placeholder">
-          <div>
-            <strong>Inspection Workflow</strong>
-            <p>Move through each step to document the roof clearly and completely.</p>
-          </div>
-        </div>
-
-        <div class="slope-grid" style="margin-top: 24px;">
-          <button type="button" class="secondary-button" onclick="window.location.href='photos.html'">
-            Photos
-          </button>
-
-          <button type="button" class="secondary-button" onclick="alert('Roof diagram view will connect later.')">
-            Roof Diagram
-          </button>
-
-          <button type="button" class="secondary-button" onclick="alert('Repair event workflow coming next.')">
-            Repair Events
-          </button>
-
-          <button type="button" class="secondary-button" onclick="alert('Scope notes builder will connect later.')">
-            Scope Notes
-          </button>
-        </div>
-
-        <div class="damage-card">
-          <h3>Field Notes</h3>
-
-          <div class="dictation-actions">
-            <button type="button" class="secondary-button" id="dictation-btn" onclick="toggleDictation()">
-              Start Dictation
-            </button>
-            <span id="dictation-status" class="dictation-status">Tap to speak notes.</span>
-          </div>
-
-          <textarea
-            id="field-notes"
-            placeholder="Add notes about damage, access, steepness, materials, or special conditions."
-          ></textarea>
-        </div>
-
-        <div class="form-actions">
-          <button type="button" class="secondary-button" onclick="window.location.href='new-claim.html'">
-            Back to Job
-          </button>
-
-          <button type="button" class="primary-button" onclick="window.location.href='reports.html'">
-            Continue to Reports
-          </button>
-        </div>
-
-      </div>
-    </div>
-  </div>
-
-  <script>
-    let recognition;
-    let isListening = false;
-
-    function toggleDictation() {
-      const SpeechRecognition = window.SpeechRecognition || window.webkitSpeechRecognition;
-      const button = document.getElementById("dictation-btn");
-      const status = document.getElementById("dictation-status");
-      const notes = document.getElementById("field-notes");
-
-      if (!SpeechRecognition) {
-        status.textContent = "Speech-to-text is not supported in this browser.";
-        return;
-      }
-
-      if (!recognition) {
-        recognition = new SpeechRecognition();
-        recognition.continuous = true;
-        recognition.interimResults = true;
-        recognition.lang = "en-US";
-
-        recognition.onstart = function () {
-          isListening = true;
-          button.textContent = "Stop Dictation";
-          status.textContent = "Listening...";
-        };
-
-        recognition.onresult = function (event) {
-          let finalTranscript = "";
-          let interimTranscript = "";
-
-          for (let i = event.resultIndex; i < event.results.length; i++) {
-            const transcript = event.results[i][0].transcript;
-            if (event.results[i].isFinal) {
-              finalTranscript += transcript + " ";
-            } else {
-              interimTranscript += transcript;
-            }
-          }
-
-          notes.value = notes.value.replace(/\s*\[listening\.\.\..*\]$/i, "").trim();
-
-          if (finalTranscript) {
-            notes.value = (notes.value + " " + finalTranscript).trim() + " ";
-          }
-
-          if (interimTranscript) {
-            notes.value = notes.value.trim() + " [listening... " + interimTranscript + "]";
-          }
-        };
-
-        recognition.onerror = function () {
-          status.textContent = "There was a problem with speech capture.";
-          button.textContent = "Start Dictation";
-          isListening = false;
-        };
-
-        recognition.onend = function () {
-          notes.value = notes.value.replace(/\s*\[listening\.\.\..*\]$/i, "").trim();
-          button.textContent = "Start Dictation";
-          status.textContent = "Tap to speak notes.";
-          isListening = false;
-        };
-      }
-
-      if (isListening) {
-        recognition.stop();
-      } else {
-        recognition.start();
-      }
+    if (!SpeechRecognition) {
+      status.textContent =
+        "Speech-to-text is not supported in this browser. Try Chrome or Edge.";
+      return;
     }
-  </script>
 
-</body>
-</html>
+    if (!recognition) {
+      recognition = new SpeechRecognition();
+
+      recognition.continuous = true;
+      recognition.interimResults = true;
+      recognition.lang = "en-US";
+
+      recognition.onstart = function () {
+        isListening = true;
+        finalNotesBeforeListening = notes.value.trim();
+
+        button.textContent = "Stop Dictation";
+        status.textContent = "Listening...";
+      };
+
+      recognition.onresult = function (event) {
+        let finalTranscript = "";
+        let interimTranscript = "";
+
+        for (let i = 0; i < event.results.length; i++) {
+          const transcript = event.results[i][0].transcript;
+
+          if (event.results[i].isFinal) {
+            finalTranscript += transcript + " ";
+          } else {
+            interimTranscript += transcript;
+          }
+        }
+
+        let updatedNotes = finalNotesBeforeListening;
+
+        if (finalTranscript.trim()) {
+          updatedNotes +=
+            (updatedNotes ? " " : "") + finalTranscript.trim();
+        }
+
+        if (interimTranscript.trim()) {
+          updatedNotes +=
+            (updatedNotes ? " " : "") +
+            "[listening... " +
+            interimTranscript.trim() +
+            "]";
+        }
+
+        notes.value = updatedNotes.trim();
+      };
+
+      recognition.onerror = function (event) {
+        isListening = false;
+        button.textContent = "Start Dictation";
+
+        if (event.error === "not-allowed") {
+          status.textContent = "Microphone permission was denied.";
+        } else if (event.error === "no-speech") {
+          status.textContent = "No speech was detected.";
+        } else {
+          status.textContent = "There was a problem with speech capture.";
+        }
+      };
+
+      recognition.onend = function () {
+        isListening = false;
+        button.textContent = "Start Dictation";
+        status.textContent = "Tap to speak notes.";
+
+        notes.value = notes.value
+          .replace(/\s*\[listening\.\.\..*?\]$/i, "")
+          .trim();
+      };
+    }
+
+    if (isListening) {
+      recognition.stop();
+    } else {
+      recognition.start();
+    }
+  }
+</script>
