@@ -117,11 +117,8 @@
 <hr>
 
 <h2>Measurement Source</h2>
-
 <p class="section-help">Choose how this job’s roof measurements will be added.</p>
-
 <div class="choice-list">
-
 <label class="choice-row">
 <input type="radio" name="measurement-source" value="eagleview">
 <div>
@@ -129,7 +126,6 @@
 <small>Use an EagleView PDF, XML, or report file.</small>
 </div>
 </label>
-
 <label class="choice-row">
 <input type="radio" name="measurement-source" value="hover">
 <div>
@@ -137,7 +133,6 @@
 <small>Use a HOVER roof measurement report.</small>
 </div>
 </label>
-
 <label class="choice-row">
 <input type="radio" name="measurement-source" value="both">
 <div>
@@ -145,7 +140,6 @@
 <small>Upload both EagleView and HOVER for comparison.</small>
 </div>
 </label>
-
 <label class="choice-row">
 <input type="radio" name="measurement-source" value="manual">
 <div>
@@ -153,6 +147,25 @@
 <small>Measurements can be uploaded after the job is created.</small>
 </div>
 </label>
+</div>
+<div class="upload-section">
+<label class="upload-button">
+<span>Upload HOVER Report</span>
+<input type="file" name="hover-upload" accept=".pdf,.xml,.jpg,.jpeg,.png">
+</label>
+<label class="upload-button">
+<span>Upload EagleView Report</span>
+<input type="file" name="eagleview-upload" accept=".pdf,.xml,.jpg,.jpeg,.png">
+</label>
+</div>
+<div class="form-actions">
+<button type="submit" class="secondary-button">
+Save for Inspection
+</button>
+<button type="button" class="primary-button" onclick="window.location.href='inspection.html'">
+Start Inspection
+</button>
+</div>
 
 </div>
 
