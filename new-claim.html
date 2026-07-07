@@ -1,202 +1,215 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>New Job | Compass</title>
-<link rel="stylesheet" href="style.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>New Job | Compass</title>
+  <link rel="stylesheet" href="style.css">
 </head>
-
-<script>
-function showInsuranceDetails(show) {
-  const insuranceDetails = document.getElementById("insurance-details");
-
-  if (!insuranceDetails) return;
-
-  if (show) {
-    insuranceDetails.classList.add("is-visible");
-  } else {
-    insuranceDetails.classList.remove("is-visible");
-  }
-}
-</script>
-
-  
 <body>
 
-<div class="brand-name">COMPASS</div>
+  <div class="welcome-screen">
+    <div class="welcome-card">
 
-<h1>New Job</h1>
+      <div class="brand-name">COMPASS</div>
 
-<p class="subtitle">Create the job file before inspection begins.</p>
+      <h1>New Job</h1>
 
-<form class="form-card">
+      <p class="subtitle">Create the job file before inspection begins.</p>
 
-<h2>Customer</h2>
+      <form class="form-card">
 
-<input type="text" placeholder="Customer Name">
-<input type="text" placeholder="Property Address">
-<input type="tel" placeholder="Phone Number">
-<input type="email" placeholder="Email Address">
+        <h2>Customer</h2>
 
-<select>
-<option>Preferred Contact Method</option>
-<option>Phone Call</option>
-<option>Text Message</option>
-<option>Email</option>
-</select>
+        <input type="text" name="customer-name" placeholder="Customer Name">
+        <input type="text" name="property-address" placeholder="Property Address">
+        <input type="tel" name="phone-number" placeholder="Phone Number">
+        <input type="email" name="email-address" placeholder="Email Address">
 
-<hr>
+        <select name="preferred-contact-method">
+          <option selected disabled>Preferred Contact Method</option>
+          <option>Phone Call</option>
+          <option>Text Message</option>
+          <option>Email</option>
+        </select>
 
-<h2>Payment Type</h2>
+        <hr>
 
-<div class="choice-list">
+        <h2>Payment Type</h2>
 
-<label class="choice-row">
-<input type="radio" name="payment-type" value="insurance" onclick="showInsuranceDetails(true)">
-<div>
-<strong>Insurance Claim</strong>
-<small>Storm damage or carrier involvement</small>
-</div>
-</label>
+        <div class="choice-list">
 
-<label class="choice-row">
-<input type="radio" name="payment-type" value="cash" onclick="showInsuranceDetails(false)">
-<div>
-<strong>Cash Job</strong>
-<small>Retail customer paying directly</small>
-</div>
-</label>
+          <label class="choice-row">
+            <input type="radio" name="payment-type" value="insurance" onclick="showInsuranceDetails(true)">
+            <div>
+              <strong>Insurance Claim</strong>
+              <small>Storm damage or carrier involvement</small>
+            </div>
+          </label>
 
-</div>
+          <label class="choice-row">
+            <input type="radio" name="payment-type" value="cash" onclick="showInsuranceDetails(false)">
+            <div>
+              <strong>Cash Job</strong>
+              <small>Retail customer paying directly</small>
+            </div>
+          </label>
 
-<div id="insurance-details" class="insurance-details">
+        </div>
 
-<h3>Insurance Information</h3>
+        <div id="insurance-details" class="insurance-details">
+          <h3>Insurance Information</h3>
 
-<input type="text" name="insurance-carrier" placeholder="Insurance Carrier">
-<input type="text" name="claim-number" placeholder="Claim Number">
-<input type="text" name="adjuster-name" placeholder="Adjuster Name">
-<input type="tel" name="adjuster-phone" placeholder="Adjuster Phone">
-<input type="email" name="adjuster-email" placeholder="Adjuster Email">
+          <input type="text" name="insurance-carrier" placeholder="Insurance Carrier">
+          <input type="text" name="claim-number" placeholder="Claim Number">
+          <input type="text" name="adjuster-name" placeholder="Adjuster Name">
+          <input type="tel" name="adjuster-phone" placeholder="Adjuster Phone">
+          <input type="email" name="adjuster-email" placeholder="Adjuster Email">
+          <textarea name="claim-notes" placeholder="Claim Notes"></textarea>
+        </div>
 
-<textarea name="claim-notes" placeholder="Claim Notes"></textarea>
+        <h2>Property Type</h2>
 
-</div>
+        <div class="choice-list">
 
+          <label class="choice-row">
+            <input type="radio" name="property-type" value="residential">
+            <div>
+              <strong>Residential</strong>
+              <small>Single-family home or residential property</small>
+            </div>
+          </label>
 
-<h2>Property Type</h2>
+          <label class="choice-row">
+            <input type="radio" name="property-type" value="commercial">
+            <div>
+              <strong>Commercial</strong>
+              <small>Business, church, or large property</small>
+            </div>
+          </label>
 
-<div class="choice-list">
+          <label class="choice-row">
+            <input type="radio" name="property-type" value="multi-family">
+            <div>
+              <strong>Multi-Family</strong>
+              <small>Apartments, townhomes, condos, or HOA</small>
+            </div>
+          </label>
 
-<label class="choice-row">
-<input type="radio" name="property-type">
-<div>
-<strong>Residential</strong>
-<small>Single-family home or residential property</small>
-</div>
-</label>
+        </div>
 
-<label class="choice-row">
-<input type="radio" name="property-type">
-<div>
-<strong>Commercial</strong>
-<small>Business, church, or large property</small>
-</div>
-</label>
+        <hr>
 
-<label class="choice-row">
-<input type="radio" name="property-type">
-<div>
-<strong>Multi-Family</strong>
-<small>Apartments, townhomes, condos, or HOA</small>
-</div>
-</label>
+        <h2>Property</h2>
 
-</div>
+        <select name="roofing-material">
+          <option selected disabled>Roofing Material</option>
+          <option>Laminate Shingle</option>
+          <option>Architectural Shingle</option>
+          <option>3-Tab Shingle</option>
+          <option>Wood Shake</option>
+          <option>Metal-Corrugated</option>
+          <option>Metal-Ribbed</option>
+          <option>Metal-Standing Seam</option>
+          <option>Tile</option>
+          <option>Flat Roofing-Mod Bit</option>
+          <option>Flat Roofing-TPO</option>
+          <option>Flat Roofing-EPDM (Rubber)</option>
+          <option>Other/Unknown</option>
+        </select>
 
-<hr>
+        <select name="number-of-stories">
+          <option selected disabled>Number of Stories</option>
+          <option>1 Story</option>
+          <option>1.5 Stories</option>
+          <option>2 Stories</option>
+          <option>3+ Stories</option>
+        </select>
 
-<h2>Property</h2>
+        <input type="text" name="detached-structures" placeholder="Number of Detached Structures">
+        <input type="text" name="access-notes" placeholder="Gate Code / Access Notes">
+        <textarea name="special-instructions" placeholder="Special Instructions"></textarea>
 
-<select>
-<option>Roofing Material</option>
-<option>Laminate Shingle</option>
-<option>Architectural Shingle</option>
-<option>3-Tab Shingle</option>
-<option>Wood Shake</option>
-<option>Metal-Corrugated</option>
-<option>Metal-Ribbed</option>
-<option>Metal-Standing Seam</option>
-<option>Tile</option>
-<option>Flat Roofing-Mod Bit</option>
-<option>Flat Roofing-TPO</option>
-<option>Flat Roofing-EPDM(Rubber)</option>
-<option>Other/Unknown</option>
-</select>
+        <hr>
 
-<select>
-<option>Number of Stories</option>
-<option>1 Story</option>
-<option>1.5 Stories</option>
-<option>2 Stories</option>
-<option>3+ Stories</option>
-</select>
+        <h2>Measurement Source</h2>
 
-<input type="text" placeholder="Number of Detached Structures">
-<input type="text" placeholder="Gate Code / Access Notes">
-<textarea placeholder="Special Instructions"></textarea>
+        <p class="section-help">Choose how this job's roof measurements will be added.</p>
 
-<hr>
+        <div class="choice-list">
 
-<h2>Measurement Source</h2>
-<p class="section-help">Choose how this job’s roof measurements will be added.</p>
-<div class="choice-list">
-<label class="choice-row">
-<input type="radio" name="measurement-source" value="eagleview">
-<div>
-<strong>Upload EagleView</strong>
-<small>Use an EagleView PDF, XML, or report file.</small>
-</div>
-</label>
-<label class="choice-row">
-<input type="radio" name="measurement-source" value="hover">
-<div>
-<strong>Upload HOVER</strong>
-<small>Use a HOVER roof measurement report.</small>
-</div>
-</label>
-<label class="choice-row">
-<input type="radio" name="measurement-source" value="both">
-<div>
-<strong>Use Both</strong>
-<small>Upload both EagleView and HOVER for comparison.</small>
-</div>
-</label>
-<label class="choice-row">
-<input type="radio" name="measurement-source" value="manual">
-<div>
-<strong>Add Later</strong>
-<small>Measurements can be uploaded after the job is created.</small>
-</div>
-</label>
-</div>
-<div class="upload-section">
-<label class="upload-button">
-<span>Upload HOVER Report</span>
-<input type="file" name="hover-upload" accept=".pdf,.xml,.jpg,.jpeg,.png">
-</label>
-<label class="upload-button">
-<span>Upload EagleView Report</span>
-<input type="file" name="eagleview-upload" accept=".pdf,.xml,.jpg,.jpeg,.png">
-</label>
-</div>
-<div class="form-actions">
-<button type="submit" class="secondary-button">
-Save for Inspection
-</button>
-<button type="button" class="primary-button" onclick="window.location.href='inspection.html'">
-Start Inspection
-</button>
-</div>
+          <label class="choice-row">
+            <input type="radio" name="measurement-source" value="eagleview">
+            <div>
+              <strong>Upload EagleView</strong>
+              <small>Use an EagleView PDF, XML, or report file.</small>
+            </div>
+          </label>
 
+          <label class="choice-row">
+            <input type="radio" name="measurement-source" value="hover">
+            <div>
+              <strong>Upload HOVER</strong>
+              <small>Use a HOVER roof measurement report.</small>
+            </div>
+          </label>
+
+          <label class="choice-row">
+            <input type="radio" name="measurement-source" value="both">
+            <div>
+              <strong>Use Both</strong>
+              <small>Upload both EagleView and HOVER for comparison.</small>
+            </div>
+          </label>
+
+          <label class="choice-row">
+            <input type="radio" name="measurement-source" value="manual">
+            <div>
+              <strong>Add Later</strong>
+              <small>Measurements can be uploaded after the job is created.</small>
+            </div>
+          </label>
+
+        </div>
+
+        <div class="upload-section">
+          <label class="upload-button">
+            <span>Upload HOVER Report</span>
+            <input type="file" name="hover-upload" accept=".pdf,.xml,.jpg,.jpeg,.png">
+          </label>
+
+          <label class="upload-button">
+            <span>Upload EagleView Report</span>
+            <input type="file" name="eagleview-upload" accept=".pdf,.xml,.jpg,.jpeg,.png">
+          </label>
+        </div>
+
+        <div class="form-actions">
+          <button type="submit" class="secondary-button">
+            Save for Inspection
+          </button>
+
+          <button type="button" class="primary-button" onclick="window.location.href='roof-inspection.html'">
+            Start Inspection
+          </button>
+        </div>
+
+      </form>
+    </div>
+  </div>
+
+  <script>
+    function showInsuranceDetails(show) {
+      const insuranceDetails = document.getElementById("insurance-details");
+      if (!insuranceDetails) return;
+
+      if (show) {
+        insuranceDetails.classList.add("is-visible");
+      } else {
+        insuranceDetails.classList.remove("is-visible");
+      }
+    }
+  </script>
+
+</body>
+</html>
