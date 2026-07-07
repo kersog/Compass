@@ -580,3 +580,359 @@ hr {
         min-height:260px;
     }
 }
+
+/* ================================
+   COMPASS BY KERSOG
+   Visual System v0.1
+   ================================ */
+
+:root {
+  /* Kersog Material Palette */
+  --paper: #f4f0e8;
+  --limestone: #d9d2c5;
+  --linen: #ede6da;
+  --white-oak: #9b7a56;
+  --aged-oak: #7a5a3a;
+  --leather: #4a3124;
+  --antique-brass: #a68442;
+  --blackened-steel: #3c4043;
+  --charcoal: #1f2326;
+  --garden: #6f7a55;
+
+  /* Functional Colors */
+  --background: var(--paper);
+  --surface: #fffaf1;
+  --surface-muted: var(--limestone);
+  --text: var(--charcoal);
+  --text-muted: #6f6a61;
+  --border: rgba(31, 35, 38, 0.18);
+  --accent: var(--antique-brass);
+  --success: var(--garden);
+  --danger: #8b3a2b;
+
+  /* Typography */
+  --font-primary: "Inter", "Helvetica Neue", Arial, sans-serif;
+  --font-display: "Reem Kufi", "Inter", sans-serif;
+
+  /* Geometry */
+  --radius-none: 0;
+  --border-weight: 1px;
+  --space-xs: 4px;
+  --space-sm: 8px;
+  --space-md: 16px;
+  --space-lg: 24px;
+  --space-xl: 40px;
+  --space-xxl: 64px;
+}
+
+/* ================================
+   Base
+   ================================ */
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  background:
+    linear-gradient(rgba(244, 240, 232, 0.92), rgba(244, 240, 232, 0.92)),
+    url("/images/kersog-limestone-texture.jpg");
+  background-size: cover;
+  background-attachment: fixed;
+  color: var(--text);
+  font-family: var(--font-primary);
+  line-height: 1.5;
+}
+
+/* ================================
+   App Shell
+   ================================ */
+
+.app-shell {
+  min-height: 100vh;
+  display: grid;
+  grid-template-columns: 280px 1fr;
+  background: rgba(244, 240, 232, 0.94);
+}
+
+.sidebar {
+  background: var(--charcoal);
+  color: var(--paper);
+  border-right: 1px solid var(--blackened-steel);
+  padding: var(--space-xl) var(--space-lg);
+}
+
+.sidebar-logo {
+  font-family: var(--font-display);
+  font-size: 22px;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  margin-bottom: var(--space-xxl);
+}
+
+.nav-link {
+  display: block;
+  color: rgba(244, 240, 232, 0.72);
+  text-decoration: none;
+  padding: 12px 0;
+  border-bottom: 1px solid rgba(244, 240, 232, 0.12);
+  font-size: 14px;
+  letter-spacing: 0.04em;
+}
+
+.nav-link:hover,
+.nav-link.active {
+  color: var(--paper);
+}
+
+/* ================================
+   Main Content
+   ================================ */
+
+.main {
+  padding: var(--space-xl);
+}
+
+.page-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  margin-bottom: var(--space-xl);
+  border-bottom: 1px solid var(--border);
+  padding-bottom: var(--space-lg);
+}
+
+.eyebrow {
+  text-transform: uppercase;
+  letter-spacing: 0.16em;
+  font-size: 11px;
+  color: var(--text-muted);
+  margin-bottom: var(--space-sm);
+}
+
+h1,
+h2,
+h3 {
+  font-family: var(--font-display);
+  font-weight: 500;
+  margin: 0;
+  color: var(--charcoal);
+}
+
+h1 {
+  font-size: 44px;
+  letter-spacing: -0.03em;
+}
+
+h2 {
+  font-size: 28px;
+}
+
+h3 {
+  font-size: 18px;
+}
+
+/* ================================
+   Cards / Panels
+   ================================ */
+
+.panel {
+  background: rgba(255, 250, 241, 0.86);
+  border: 1px solid var(--border);
+  border-radius: 0;
+  padding: var(--space-lg);
+  box-shadow: 0 18px 40px rgba(31, 35, 38, 0.06);
+}
+
+.panel.dark {
+  background: var(--charcoal);
+  color: var(--paper);
+}
+
+.panel.material {
+  background:
+    linear-gradient(rgba(255, 250, 241, 0.88), rgba(255, 250, 241, 0.88)),
+    url("/images/kersog-linen-texture.jpg");
+  background-size: cover;
+}
+
+/* ================================
+   Buttons
+   ================================ */
+
+button,
+.btn {
+  border-radius: 0;
+  border: 1px solid var(--charcoal);
+  background: transparent;
+  color: var(--charcoal);
+  padding: 12px 18px;
+  font-family: var(--font-primary);
+  font-size: 13px;
+  font-weight: 600;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  cursor: pointer;
+}
+
+.btn-primary {
+  background: var(--charcoal);
+  color: var(--paper);
+}
+
+.btn-primary:hover {
+  background: var(--blackened-steel);
+}
+
+.btn-accent {
+  background: var(--antique-brass);
+  border-color: var(--antique-brass);
+  color: var(--charcoal);
+}
+
+/* ================================
+   Forms
+   ================================ */
+
+input,
+textarea,
+select {
+  width: 100%;
+  border-radius: 0;
+  border: 1px solid var(--border);
+  background: var(--surface);
+  color: var(--text);
+  padding: 12px 14px;
+  font-family: var(--font-primary);
+  font-size: 15px;
+}
+
+input:focus,
+textarea:focus,
+select:focus {
+  outline: none;
+  border-color: var(--antique-brass);
+  box-shadow: inset 0 -2px 0 var(--antique-brass);
+}
+
+label {
+  display: block;
+  margin-bottom: var(--space-sm);
+  font-size: 12px;
+  text-transform: uppercase;
+  letter-spacing: 0.12em;
+  color: var(--text-muted);
+}
+
+/* ================================
+   Inspection / Photo UI
+   ================================ */
+
+.photo-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+  gap: var(--space-md);
+}
+
+.photo-card {
+  border: 1px solid var(--border);
+  background: var(--surface);
+  border-radius: 0;
+  overflow: hidden;
+}
+
+.photo-card img {
+  width: 100%;
+  display: block;
+  aspect-ratio: 4 / 3;
+  object-fit: cover;
+}
+
+.photo-meta {
+  padding: var(--space-md);
+  border-top: 1px solid var(--border);
+}
+
+/* ================================
+   Estimate Summary
+   ================================ */
+
+.estimate-summary {
+  display: grid;
+  gap: var(--space-sm);
+}
+
+.estimate-row {
+  display: flex;
+  justify-content: space-between;
+  padding: 12px 0;
+  border-bottom: 1px solid var(--border);
+}
+
+.estimate-row.total {
+  font-weight: 700;
+  font-size: 20px;
+  color: var(--charcoal);
+  border-top: 2px solid var(--charcoal);
+  margin-top: var(--space-md);
+}
+
+/* ================================
+   Kersog Background Sections
+   ================================ */
+
+.bg-limestone {
+  background:
+    linear-gradient(rgba(217, 210, 197, 0.88), rgba(217, 210, 197, 0.88)),
+    url("/images/limestone-wall.jpg");
+  background-size: cover;
+}
+
+.bg-oak {
+  background:
+    linear-gradient(rgba(155, 122, 86, 0.72), rgba(155, 122, 86, 0.72)),
+    url("/images/white-oak-grain.jpg");
+  background-size: cover;
+}
+
+.bg-garden {
+  background:
+    linear-gradient(rgba(244, 240, 232, 0.82), rgba(244, 240, 232, 0.82)),
+    url("/images/kansas-garden-light.jpg");
+  background-size: cover;
+}
+
+/* ================================
+   Utility
+   ================================ */
+
+.grid-2 {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: var(--space-lg);
+}
+
+.grid-3 {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: var(--space-lg);
+}
+
+.divider {
+  border: 0;
+  border-top: 1px solid var(--border);
+  margin: var(--space-xl) 0;
+}
+
+.muted {
+  color: var(--text-muted);
+}
+
+.brass-rule {
+  height: 2px;
+  width: 80px;
+  background: var(--antique-brass);
+  margin: var(--space-md) 0;
+}
+
