@@ -522,3 +522,64 @@ textarea:focus{
 .primary-button:hover {
   background: #173c2c;
 }
+
+css
+
+
+.choice-list {
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+}
+.choice-row {
+  display: flex;
+  align-items: flex-start;
+  gap: 12px;
+  cursor: pointer;
+}
+.choice-row input[type="radio"] {
+  margin-top: 5px;
+  flex-shrink: 0;
+}
+.choice-row div {
+  display: flex;
+  align-items: baseline;
+  gap: 8px;
+  flex-wrap: wrap;
+}
+.choice-row strong {
+  font-weight: 700;
+}
+.choice-row small {
+  font-size: 16px;
+  color: #111827;
+}
+.upload-section {
+  display: flex;
+  gap: 18px;
+  margin-top: 28px;
+  flex-wrap: wrap;
+}
+.upload-button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-width: 280px;
+  padding: 20px 28px;
+  border-radius: 14px;
+  border: 1px solid #d1d5db;
+  background: #ffffff;
+  color: #111827;
+  font-size: 24px;
+  font-weight: 700;
+  cursor: pointer;
+}
+.upload-button input[type="file"] {
+  display: none;
+}
+.form-actions {
+  display: flex;
+  gap: 12px;
+  margin-top: 28px;
+  flex-wrap: wrap;
+}
