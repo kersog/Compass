@@ -483,3 +483,100 @@ hr {
   color: var(--green-dark);
   margin-bottom: 18px;
 }
+
+.inspection-header{
+    display:grid;
+    grid-template-columns:1fr 1fr;
+    gap:18px;
+    margin:30px 0;
+}
+
+.job-summary-card,
+.inspection-progress,
+.slope-card,
+.damage-card{
+    background:#F7F4EC;
+    border:1px solid var(--border);
+    border-radius:18px;
+    padding:22px;
+    text-align:left;
+}
+
+.job-summary-card h2,
+.slope-card h3,
+.damage-card h3{
+    color:var(--green-dark);
+    margin-bottom:8px;
+}
+
+.status-pill{
+    display:inline-block;
+    margin-top:12px;
+    padding:8px 12px;
+    border-radius:999px;
+    background:var(--green);
+    color:white;
+    font-size:13px;
+    font-weight:700;
+}
+
+.progress-bar{
+    width:100%;
+    height:14px;
+    background:#E6E3DA;
+    border-radius:999px;
+    overflow:hidden;
+    margin:12px 0;
+}
+
+.progress-bar div{
+    height:100%;
+    background:var(--green);
+    border-radius:999px;
+}
+
+.diagram-placeholder{
+    min-height:360px;
+    border:2px dashed var(--border);
+    border-radius:22px;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    padding:30px;
+    background:#F7F4EC;
+    text-align:center;
+}
+
+.diagram-placeholder strong{
+    display:block;
+    font-size:24px;
+    color:var(--green-dark);
+    margin-bottom:10px;
+}
+
+.diagram-placeholder p{
+    color:var(--gray);
+    margin-bottom:20px;
+}
+
+.slope-grid{
+    display:grid;
+    grid-template-columns:repeat(2,1fr);
+    gap:18px;
+    margin-bottom:18px;
+}
+
+.damage-card{
+    margin-bottom:18px;
+}
+
+@media(max-width:768px){
+    .inspection-header,
+    .slope-grid{
+        grid-template-columns:1fr;
+    }
+
+    .diagram-placeholder{
+        min-height:260px;
+    }
+}
