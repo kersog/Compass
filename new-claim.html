@@ -123,7 +123,7 @@
 <div class="choice-list">
 
 <label class="choice-row">
-<input type="radio" name="measurement-source">
+<input type="radio" name="measurement-source" value="eagleview">
 <div>
 <strong>Upload EagleView</strong>
 <small>Use an EagleView PDF, XML, or report file.</small>
@@ -131,7 +131,7 @@
 </label>
 
 <label class="choice-row">
-<input type="radio" name="measurement-source">
+<input type="radio" name="measurement-source" value="hover">
 <div>
 <strong>Upload HOVER</strong>
 <small>Use a HOVER roof measurement report.</small>
@@ -139,12 +139,37 @@
 </label>
 
 <label class="choice-row">
-<input type="radio" name="measurement-source">
+<input type="radio" name="measurement-source" value="both">
 <div>
 <strong>Use Both</strong>
 <small>Upload both EagleView and HOVER for comparison.</small>
 </div>
 </label>
+
+<label class="choice-row">
+<input type="radio" name="measurement-source" value="manual">
+<div>
+<strong>Add Later</strong>
+<small>Measurements can be uploaded after the job is created.</small>
+</div>
+</label>
+
+</div>
+
+<div class="upload-section">
+
+<label class="upload-button">
+<span>Upload HOVER Report</span>
+<input type="file" name="hover-upload" accept=".pdf,.xml,.jpg,.jpeg,.png">
+</label>
+
+<label class="upload-button">
+<span>Upload EagleView Report</span>
+<input type="file" name="eagleview-upload" accept=".pdf,.xml,.jpg,.jpeg,.png">
+</label>
+
+</div>
+
 
 <label class="choice-row">
 <input type="radio" name=”
