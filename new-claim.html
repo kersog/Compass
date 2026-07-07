@@ -20,14 +20,6 @@
 Create the job file before inspection begins.
 </p>
 
-<div class="progress-steps">
-  <span class="active">Customer</span>
-  <span>Job Type</span>
-  <span>Property</span>
-  <span>Measurements</span>
-  <span>Inspect</span>
-</div>
-
 <form class="form-card">
 
 <h2>Customer</h2>
@@ -46,60 +38,59 @@ Create the job file before inspection begins.
 
 <hr>
 
-<h2>Job Type</h2>
-
-<h3 class="section-subhead">Payment Type</h3>
+<h2>Payment Type</h2>
 
 <div class="choice-list">
 
-  <label class="choice-row">
-    <input type="radio" name="payment-type">
-    <div>
-      <strong>Insurance Claim</strong>
-      <small>Storm damage or carrier involvement</small>
-    </div>
-  </label>
+<label class="choice-row">
+<input type="radio" name="payment-type">
+<div>
+<strong>Insurance Claim</strong>
+<small>Storm damage or carrier involvement</small>
+</div>
+</label>
 
-  <label class="choice-row">
-    <input type="radio" name="payment-type">
-    <div>
-      <strong>Cash Job</strong>
-      <small>Retail customer paying directly</small>
-    </div>
-  </label>
+<label class="choice-row">
+<input type="radio" name="payment-type">
+<div>
+<strong>Cash Job</strong>
+<small>Retail customer paying directly</small>
+</div>
+</label>
 
 </div>
 
-<h3 class="section-subhead">Property Type</h3>
+<h2>Property Type</h2>
 
 <div class="choice-list">
 
-  <label class="choice-row">
-    <input type="radio" name="property-type">
-    <div>
-      <strong>Residential</strong>
-      <small>Single-family home or residential property</small>
-    </div>
-  </label>
+<label class="choice-row">
+<input type="radio" name="property-type">
+<div>
+<strong>Residential</strong>
+<small>Single-family home or residential property</small>
+</div>
+</label>
 
-  <label class="choice-row">
-    <input type="radio" name="property-type">
-    <div>
-      <strong>Commercial</strong>
-      <small>Business, church, or large property</small>
-    </div>
-  </label>
+<label class="choice-row">
+<input type="radio" name="property-type">
+<div>
+<strong>Commercial</strong>
+<small>Business, church, or large property</small>
+</div>
+</label>
 
-  <label class="choice-row">
-    <input type="radio" name="property-type">
-    <div>
-      <strong>Multi-Family</strong>
-      <small>Apartments, townhomes, condos, or HOA</small>
-    </div>
-  </label>
+<label class="choice-row">
+<input type="radio" name="property-type">
+<div>
+<strong>Multi-Family</strong>
+<small>Apartments, townhomes, condos, or HOA</small>
+</div>
+</label>
 
 </div>
 
+<hr>
 
 <h2>Property</h2>
 
@@ -114,8 +105,16 @@ Create the job file before inspection begins.
 </select>
 
 <select>
-<option>Number of Stories</option
+<option>Number of Stories</option>
+<option>1 Story</option>
+<option>1.5 Stories</option>
+<option>2 Stories</option>
+<option>3+ Stories</option>
+</select>
 
+<input type="text" placeholder="Roof Pitch if Known">
+<input type="text" placeholder="Gate Code / Access Notes">
+<textarea placeholder="Special Instructions"></textarea>
 
 <hr>
 
@@ -127,37 +126,37 @@ Choose how this job’s roof measurements will be added.
 
 <div class="choice-list">
 
-  <label class="choice-row">
-    <input type="radio" name="measurement-source">
-    <div>
-      <strong>Upload EagleView</strong>
-      <small>Use an EagleView PDF, XML, or report file.</small>
-    </div>
-  </label>
+<label class="choice-row">
+<input type="radio" name="measurement-source">
+<div>
+<strong>Upload EagleView</strong>
+<small>Use an EagleView PDF, XML, or report file.</small>
+</div>
+</label>
 
-  <label class="choice-row">
-    <input type="radio" name="measurement-source">
-    <div>
-      <strong>Upload HOVER</strong>
-      <small>Use a HOVER roof measurement report.</small>
-    </div>
-  </label>
+<label class="choice-row">
+<input type="radio" name="measurement-source">
+<div>
+<strong>Upload HOVER</strong>
+<small>Use a HOVER roof measurement report.</small>
+</div>
+</label>
 
-  <label class="choice-row">
-    <input type="radio" name="measurement-source">
-    <div>
-      <strong>Use Both</strong>
-      <small>Upload both EagleView and HOVER for comparison.</small>
-    </div>
-  </label>
+<label class="choice-row">
+<input type="radio" name="measurement-source">
+<div>
+<strong>Use Both</strong>
+<small>Upload both EagleView and HOVER for comparison.</small>
+</div>
+</label>
 
-  <label class="choice-row">
-    <input type="radio" name="measurement-source">
-    <div>
-      <strong>Skip For Now</strong>
-      <small>Add measurements later inside the job.</small>
-    </div>
-  </label>
+<label class="choice-row">
+<input type="radio" name="measurement-source">
+<div>
+<strong>Skip For Now</strong>
+<small>Add measurements later inside the job.</small>
+</div>
+</label>
 
 </div>
 
@@ -166,4 +165,61 @@ Choose how this job’s roof measurements will be added.
 
 <label class="upload-label">Upload HOVER File</label>
 <input type="file">
-                           
+
+<hr>
+
+<h2>Insurance Details</h2>
+
+<input type="text" placeholder="Carrier">
+<input type="text" placeholder="Policy Number">
+<input type="text" placeholder="Claim Number">
+<input type="date">
+<input type="text" placeholder="Adjuster Name">
+<input type="tel" placeholder="Adjuster Phone">
+<input type="email" placeholder="Adjuster Email">
+<input type="number" placeholder="Deductible">
+<input type="text" placeholder="Mortgage Company">
+
+<hr>
+
+<h2>Photo Checklist</h2>
+
+<div class="checklist-grid">
+
+<label><input type="checkbox"> Exterior Elevations</label>
+<label><input type="checkbox"> Roof Overview</label>
+<label><input type="checkbox"> Test Squares</label>
+<label><input type="checkbox"> Soft Metals</label>
+<label><input type="checkbox"> Interior Damage</label>
+<label><input type="checkbox"> Code Issues</label>
+<label><input type="checkbox"> Other</label>
+
+</div>
+
+<hr>
+
+<h2>Ready to Inspect</h2>
+
+<div class="summary-card">
+<p><strong>Customer</strong> Pending</p>
+<p><strong>Payment Type</strong> Pending</p>
+<p><strong>Property Type</strong> Pending</p>
+<p><strong>Measurements</strong> Pending</p>
+<p><strong>Photos</strong> Pending</p>
+</div>
+
+<a href="roof-inspection.html" class="btn primary">
+Begin Inspection
+</a>
+
+<a href="dashboard.html" class="btn secondary">
+Back to Dashboard
+</a>
+
+</form>
+
+</div>
+</div>
+
+</body>
+</html>
