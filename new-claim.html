@@ -7,6 +7,21 @@
 <link rel="stylesheet" href="style.css">
 </head>
 
+<script>
+function showInsuranceDetails(show) {
+  const insuranceDetails = document.getElementById("insurance-details");
+
+  if (!insuranceDetails) return;
+
+  if (show) {
+    insuranceDetails.classList.add("is-visible");
+  } else {
+    insuranceDetails.classList.remove("is-visible");
+  }
+}
+</script>
+
+  
 <body>
 
 <div class="brand-name">COMPASS</div>
