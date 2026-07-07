@@ -489,3 +489,36 @@ textarea:focus{
 .upload-button input[type="file"] {
   display: none;
 }
+
+.form-actions {
+  display: flex;
+  gap: 12px;
+  margin-top: 24px;
+  flex-wrap: wrap;
+}
+.secondary-button,
+.primary-button {
+  flex: 1;
+  min-width: 180px;
+  padding: 15px 18px;
+  border-radius: 10px;
+  font-size: 16px;
+  font-weight: 700;
+  cursor: pointer;
+}
+.secondary-button {
+  border: 1px solid #ccc;
+  background: #f7f7f7;
+  color: #222;
+}
+.secondary-button:hover {
+  background: #eeeeee;
+}
+.primary-button {
+  border: none;
+  background: #1f4f3a;
+  color: #ffffff;
+}
+.primary-button:hover {
+  background: #173c2c;
+}
