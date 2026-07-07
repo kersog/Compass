@@ -1,60 +1,99 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>New Claim | KERSOG Compass</title>
-  <link rel="stylesheet" href="../style.css" />
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>New Job | Compass</title>
+<link rel="stylesheet" href="style.css">
 </head>
-<body>
-  <main class="app-shell">
-    <header class="top-bar">
-      <a href="../index.html"><img src="../assets/images/kersog-emblem.svg" alt="KERSOG emblem" /></a>
-      <div>
-        <h1>New Claim</h1>
-        <p>Start the job file.</p>
-      </div>
-      <button class="icon-btn" onclick="fakeAction('Settings will be connected later.')">☰</button>
-    </header>
 
-    <section class="page-title">
-  <h2>New claim</h2>
-  <p>Collect only what the field user needs before inspection.</p>
-</section>
+<body>
+
+<div class="welcome-screen">
+<div class="welcome-card">
+
+<div class="brand-name">COMPASS</div>
+
+<h1>New Job</h1>
+
+<p class="subtitle">
+Create the job file before inspection begins.
+</p>
+
+<div class="progress-steps">
+  <span class="active">Customer</span>
+  <span>Job Type</span>
+  <span>Property</span>
+  <span>Measurements</span>
+  <span>Inspect</span>
+</div>
 
 <form class="form-card">
-  <label>Customer name</label>
-  <input placeholder="Homeowner name" />
 
-  <label>Property address</label>
-  <input placeholder="Street, city, state" />
+<h2>Customer</h2>
 
-  <label>Carrier</label>
-  <input placeholder="Insurance carrier" />
+<input type="text" placeholder="Customer Name">
+<input type="text" placeholder="Property Address">
+<input type="tel" placeholder="Phone Number">
+<input type="email" placeholder="Email Address">
 
-  <label>Claim number</label>
-  <input placeholder="Optional" />
+<select>
+<option>Preferred Contact Method</option>
+<option>Phone Call</option>
+<option>Text Message</option>
+<option>Email</option>
+</select>
 
-  <label>Roof type</label>
-  <select>
-    <option>Architectural asphalt shingle</option>
-    <option>3-tab asphalt shingle</option>
-    <option>Wood shake</option>
-    <option>Metal</option>
-    <option>Tile</option>
-  </select>
+<hr>
 
-  <button class="btn primary" type="button" onclick="location.href='upload-eagleview.html'">Save & Continue</button>
-</form>
+<h2>Job Type</h2>
 
-    <nav class="bottom-nav">
-      <a href="dashboard.html" data-page="dashboard">⌂<span>Home</span></a>
-      <a href="new-claim.html" data-page="new-claim">＋<span>Claim</span></a>
-      <a href="upload-eagleview.html" data-page="upload-eagleview">⇧<span>Upload</span></a>
-      <a href="roof-inspection.html" data-page="roof-inspection">⌖<span>Inspect</span></a>
-      <a href="reports.html" data-page="reports">▤<span>Reports</span></a>
-    </nav>
-  </main>
-  <script src="../script.js"></script>
-</body>
-</html>
+<div class="job-type-grid">
+
+<label class="job-type-card">
+<input type="radio" name="job-type">
+<span>🏠</span>
+<strong>Insurance Claim</strong>
+<small>Storm damage or carrier involvement</small>
+</label>
+
+<label class="job-type-card">
+<input type="radio" name="job-type">
+<span>💵</span>
+<strong>Cash Job</strong>
+<small>Retail customer paying directly</small>
+</label>
+
+<label class="job-type-card">
+<input type="radio" name="job-type">
+<span>🏢</span>
+<strong>Commercial</strong>
+<small>Business, church, or large property</small>
+</label>
+
+<label class="job-type-card">
+<input type="radio" name="job-type">
+<span>🏘</span>
+<strong>Multi-Family</strong>
+<small>Apartments, townhomes, or HOA</small>
+</label>
+
+</div>
+
+<hr>
+
+<h2>Property</h2>
+
+<select>
+<option>Roofing Material</option>
+<option>Architectural Shingle</option>
+<option>3-Tab Shingle</option>
+<option>Wood Shake</option>
+<option>Metal</option>
+<option>Tile</option>
+<option>Flat Roofing</option>
+</select>
+
+<select>
+<option>Number of Stories</option
+
