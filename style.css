@@ -465,3 +465,21 @@ hr {
     padding: 16px;
   }
 }
+
+.insurance-details {
+  display: none;
+  margin: -8px 0 32px;
+  padding: 22px;
+  border: 1px solid var(--border);
+  border-radius: 16px;
+  background: #ffffff;
+}
+.insurance-details.is-visible {
+  display: block;
+}
+.insurance-details h3 {
+  font-family: Cinzel, serif;
+  font-size: 22px;
+  color: var(--green-dark);
+  margin-bottom: 18px;
+}
