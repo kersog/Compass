@@ -17,7 +17,7 @@
 <h1>Company Settings</h1>
 
 <p class="subtitle">
-Set up how your company prices, documents, and manages jobs.
+Configure your company defaults once so every job starts with the right pricing, suppliers, and report settings.
 </p>
 
 <form class="form-card">
@@ -36,34 +36,55 @@ Set up how your company prices, documents, and manages jobs.
 
 <hr>
 
-<h2>Pricing Center</h2>
+<h2>Labor Pricing</h2>
 
 <input type="number" placeholder="Default Labor Rate Per Hour">
-<input type="number" placeholder="Roofing Labor Rate Per Square">
+<input type="number" placeholder="Roof Install Labor Rate Per Square">
 <input type="number" placeholder="Tear-Off Labor Rate Per Square">
 <input type="number" placeholder="Underlayment Labor Rate Per Square">
 <input type="number" placeholder="Flashing Labor Rate Per Linear Foot">
 <input type="number" placeholder="Drip Edge Labor Rate Per Linear Foot">
 <input type="number" placeholder="Ridge Cap Labor Rate Per Linear Foot">
-<input type="number" placeholder="Minimum Job Charge">
-
-<input type="number" placeholder="Overhead %">
-<input type="number" placeholder="Profit %">
-<input type="number" placeholder="Sales Tax %">
-
-<select>
-<option>Preferred Price Source</option>
-<option>Use Company Price List</option>
-<option>Use Supplier Material Pricing + Company Labor</option>
-<option>Use RSMeans Pricing</option>
-<option>Use Custom Manual Pricing</option>
-</select>
-
-<label class="upload-label">Upload Company Price List</label>
-<input type="file">
+<input type="number" placeholder="Vent Labor Rate Per Each">
+<input type="number" placeholder="Minimum Labor Charge">
 
 <label class="upload-label">Upload Labor Price List</label>
 <input type="file">
+
+<hr>
+
+<h2>Material Pricing</h2>
+
+<select>
+<option>Material Pricing Source</option>
+<option>Use Company Material Price List</option>
+<option>Use Supplier Material Pricing</option>
+<option>Use RSMeans Pricing</option>
+<option>Manual Pricing Only</option>
+</select>
+
+<input type="number" placeholder="Material Markup %">
+<input type="number" placeholder="Waste Factor %">
+<input type="number" placeholder="Sales Tax %">
+
+<label class="upload-label">Upload Material Price List</label>
+<input type="file">
+
+<hr>
+
+<h2>Overhead & Profit</h2>
+
+<input type="number" placeholder="Overhead %">
+<input type="number" placeholder="Profit %">
+<input type="number" placeholder="Combined O&P %">
+<input type="number" placeholder="Minimum Job Charge">
+
+<select>
+<option>Apply O&P By Default?</option>
+<option>Yes</option>
+<option>No</option>
+<option>Ask Per Job</option>
+</select>
 
 <hr>
 
@@ -75,11 +96,24 @@ Set up how your company prices, documents, and manages jobs.
 <input type="email" placeholder="Supplier Contact Email">
 
 <select>
-<option>Supplier Connection Status</option>
+<option>Supplier</option>
+<option>ABC Supply</option>
+<option>Beacon</option>
+<option>SRS Distribution</option>
+<option>Local Supplier</option>
+<option>Other</option>
+</select>
+
+<select>
+<option>Connection Status</option>
 <option>Not Connected</option>
 <option>Request Connection</option>
 <option>Connected</option>
 </select>
+
+<button type="button" class="btn secondary">
++ Add Another Supplier
+</button>
 
 <hr>
 
@@ -88,15 +122,26 @@ Set up how your company prices, documents, and manages jobs.
 <input type="number" placeholder="Default Waste %">
 <input type="text" placeholder="Default Shingle Type">
 <input type="text" placeholder="Default Underlayment">
-<input type="text" placeholder="Default Ice & Water Shield Rule">
-<input type="text" placeholder="Default Starter">
-<input type="text" placeholder="Default Ridge Cap">
-<input type="text" placeholder="Default Drip Edge">
-<input type="text" placeholder="Default Ventilation Method">
+<input type="text" placeholder="Ice & Water Shield Rule">
+<input type="text" placeholder="Starter Type">
+<input type="text" placeholder="Ridge Cap Type">
+<input type="text" placeholder="Drip Edge Type">
+<input type="text" placeholder="Ventilation Default">
 
 <hr>
 
-<h2>Team Members</h2>
+<h2>Reports & Branding</h2>
+
+<label class="upload-label">Upload Company Logo</label>
+<input type="file">
+
+<textarea placeholder="Default Email Signature"></textarea>
+<textarea placeholder="Default Report Language"></textarea>
+<textarea placeholder="Default Disclaimer or Company Notes"></textarea>
+
+<hr>
+
+<h2>Users & Permissions</h2>
 
 <input type="email" placeholder="Invite Team Member by Email">
 
@@ -110,15 +155,11 @@ Set up how your company prices, documents, and manages jobs.
 <option>Production</option>
 </select>
 
+<button type="button" class="btn secondary">
++ Invite Team Member
+</button>
+
 <hr>
-
-<h2>Report Branding</h2>
-
-<label class="upload-label">Upload Company Logo</label>
-<input type="file">
-
-<textarea placeholder="Default Email Signature"></textarea>
-<textarea placeholder="Default Report Disclaimer or Company Notes"></textarea>
 
 <button type="button" class="btn primary">
 Save Company Settings
