@@ -1,52 +1,83 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Inspection | KERSOG Compass</title>
-  <link rel="stylesheet" href="../style.css" />
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Inspection | Compass</title>
+  <link rel="stylesheet" href="style.css">
 </head>
 <body>
-  <main class="app-shell">
-    <header class="top-bar">
-      <a href="../index.html"><img src="../assets/images/kersog-emblem.svg" alt="KERSOG emblem" /></a>
-      <div>
-        <h1>Inspection</h1>
-        <p>Walk the roof with a guided workflow.</p>
+
+  <div class="welcome-screen">
+    <div class="welcome-card">
+
+      <div class="brand-name">COMPASS</div>
+
+      <h1>Inspection</h1>
+
+      <p class="subtitle">Walk the roof with a guided workflow.</p>
+
+      <div class="form-card">
+
+        <div class="inspection-header">
+          <div class="job-summary-card">
+            <h2>Roof Inspection</h2>
+            <p>Designed for a salesperson standing at the property.</p>
+            <span class="status-pill">Inspection In Progress</span>
+          </div>
+
+          <div class="inspection-progress">
+            <h3>Inspection Progress</h3>
+            <div class="progress-bar">
+              <div style="width: 38%;"></div>
+            </div>
+            <p>38% complete</p>
+          </div>
+        </div>
+
+        <div class="diagram-placeholder">
+          <div>
+            <strong>Inspection Workflow</strong>
+            <p>Move through each step to document the roof clearly and completely.</p>
+          </div>
+        </div>
+
+        <div class="slope-grid" style="margin-top: 24px;">
+          <button type="button" class="secondary-button" onclick="window.location.href='photos.html'">
+            Photos
+          </button>
+
+          <button type="button" class="secondary-button" onclick="alert('Roof diagram view will connect later.')">
+            Roof Diagram
+          </button>
+
+          <button type="button" class="secondary-button" onclick="alert('Repair event workflow coming next.')">
+            Repair Events
+          </button>
+
+          <button type="button" class="secondary-button" onclick="alert('Scope notes builder will connect later.')">
+            Scope Notes
+          </button>
+        </div>
+
+        <div class="damage-card">
+          <h3>Field Notes</h3>
+          <textarea placeholder="Add notes about damage, access, steepness, materials, or special conditions."></textarea>
+        </div>
+
+        <div class="form-actions">
+          <button type="button" class="secondary-button" onclick="window.location.href='new-claim.html'">
+            Back to Job
+          </button>
+
+          <button type="button" class="primary-button" onclick="window.location.href='reports.html'">
+            Continue to Reports
+          </button>
+        </div>
+
       </div>
-      <button class="icon-btn" onclick="fakeAction('Settings will be connected later.')">☰</button>
-    </header>
+    </div>
+  </div>
 
-    <section class="page-title">
-  <h2>Roof inspection</h2>
-  <p>Designed for a salesperson standing at the property.</p>
-</section>
-
-<section class="card">
-  <h3>Inspection progress</h3>
-  <div class="progress"><div style="width: 38%"></div></div>
-</section>
-
-<section class="grid-actions">
-  <button class="action-tile" onclick="location.href='photos.html'"><strong>Photos</strong><span>Capture damage and elevations.</span></button>
-  <button class="action-tile" onclick="fakeAction('Roof diagram view will connect to Bob’s geometry engine later.')"><strong>Roof Diagram</strong><span>Facet view, markers, and repair zones.</span></button>
-  <button class="action-tile" onclick="fakeAction('Repair event workflow coming next.')"><strong>Repair Events</strong><span>Confirm valleys, transitions, fixtures, and damage.</span></button>
-  <button class="action-tile" onclick="fakeAction('Scope builder will connect later.')"><strong>Scope Notes</strong><span>Build documentation as you walk.</span></button>
-</section>
-
-<section class="card">
-  <h3>Field notes</h3>
-  <textarea placeholder="Add notes about damage, access, steepness, materials, or special conditions."></textarea>
-</section>
-
-    <nav class="bottom-nav">
-      <a href="dashboard.html" data-page="dashboard">⌂<span>Home</span></a>
-      <a href="new-claim.html" data-page="new-claim">＋<span>Claim</span></a>
-      <a href="upload-eagleview.html" data-page="upload-eagleview">⇧<span>Upload</span></a>
-      <a href="roof-inspection.html" data-page="roof-inspection">⌖<span>Inspect</span></a>
-      <a href="reports.html" data-page="reports">▤<span>Reports</span></a>
-    </nav>
-  </main>
-  <script src="../script.js"></script>
 </body>
 </html>
