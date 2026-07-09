@@ -406,6 +406,12 @@ hr {
   margin-bottom: 10px;
 }
 
+.button-stack .btn {
+    width: 100%;
+    text-align: center;
+    box-sizing: border-box;
+}
+
 /* ===========================
    INSPECTION PAGE HELPERS
    =========================== */
